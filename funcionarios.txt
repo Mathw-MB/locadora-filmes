@@ -1,0 +1,4 @@
+GERENTE;gerente 1;123;1500.0;300.0
+ATENDENTE;atendente 1;45;1000.0;manha
+GERENTE;matheus Gerente;12;15000.0;2000.0
+ATENDENTE;Matheus Atendente;34;9000.0;manha
