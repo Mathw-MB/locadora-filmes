@@ -67,7 +67,8 @@ O objetivo é aplicar conceitos de **Orientação a Objetos**, **Herança**, **P
 
    **Ou no VS Code:**
 
-   1. Abra a pasta do projeto.
+   1. Abra a pasta do projeto:
+      * **File ▶ Open Folder...**, navegue até a pasta `locadora-filmes` e clique em **OK**.
    2. Na aba **JAVA PROJECTS**, clique em **+** ao lado de `src`.
    3. Selecione **Add Folder to Java Source Path**.
 
