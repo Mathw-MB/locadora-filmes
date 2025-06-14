@@ -39,7 +39,7 @@ O objetivo é aplicar conceitos de **Orientação a Objetos**, **Herança**, **P
 
   * `Principal` (menu principal, delega operações aos controllers)
 
-Relações principais:
+**Relações principais:**
 
 * **Herança:** `Funcionario` é superclasse de `Gerente` e `Atendente`
 * **Interface:** `Trabalhavel` implementada por `Gerente` e `Atendente`
@@ -48,5 +48,61 @@ Relações principais:
 
 ---
 
-**Autores:** Matheus Miguel Barbosa
+## Como Executar o Projeto
+
+1. **Clone o repositório**
+
+   ```bash
+   git clone https://github.com/Mathw-MB/locadora-filmes.git
+   cd locadora-filmes
+   ```
+
+2. **Compilar**
+
+   **Pelo terminal (na raiz do projeto):**
+
+   ```bash
+   javac -d bin -sourcepath src src/view/Principal.java
+   ```
+
+   **Ou no VS Code:**
+
+   1. Abra a pasta do projeto.
+   2. Na aba **JAVA PROJECTS**, clique em **+** ao lado de `src`.
+   3. Selecione **Add Folder to Java Source Path**.
+
+3. **Executar**
+
+   **Pelo terminal:**
+
+   ```bash
+   java -cp bin view.Principal
+   ```
+
+   **No VS Code:**
+
+   1. Abra `src/view/Principal.java`.
+   2. Clique em **Run** (ou aceite o **Add to Source Path**, se aparecer).
+
+---
+
+## Uso do ChatGPT
+
+Usei o ChatGPT para:
+
+* **Validações e Exceções:** implementar CPF, duplicatas, datas, e melhorar mensagens de erro.
+* **Refatoração:** modularizar controllers e métodos estáticos.
+* **Documentação:** gerar e formatar este `README.md`.
+* **Suporte Git/GitHub e VS Code:** tirar dúvidas sobre configuração de workspace, comandos Git e execução.
+
+---
+
+## Referências e Recursos
+
+* Slides e exercícios das **Aulas 04, 06, 07, 23 e 24**
+* **ChatGPT (OpenAI)** – suporte à modelagem, correção e documentação
+
+---
+
+**Autor:** Matheus Miguel Barbosa
 **Data de Entrega:** 16/06/2025
