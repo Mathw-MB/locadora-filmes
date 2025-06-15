@@ -29,13 +29,18 @@ public class Gerente extends Funcionario implements Trabalhavel {
 
     @Override
     public String toString() {
-        return "[GERENTE] " + super.toString() + 
-               "\\nBônus Anual: R$" + bonusAnual;
+        // super.toString() agora retorna Nome, Matrícula e Salário Base
+        return "[GERENTE]\n" 
+            + super.toString() 
+            + "\nBônus Anual: R$" + bonusAnual;
     }
 
     @Override
     public String toText() {
-        return "GERENTE;" + getNome() + ";" + getMatricula() +
-               ";" + getSalarioBase() + ";" + bonusAnual;
+        return "GERENTE;" 
+            + getNome() + ";" 
+            + getMatricula() + ";" 
+            + getSalarioBase() + ";" 
+            + bonusAnual;
     }
 }

@@ -25,10 +25,11 @@ public class Filme {
 
     @Override
     public String toString() {
-        return "Título: " + titulo  +
-               "\\nDiretor: " + diretor +
-               "\\nAno: " + ano +
-               "\\nGênero: " + genero.getNome();
+        return  "Título: " + titulo      + "\n"
+              + "Diretor: "   + diretor     + "\n"
+              + "Ano: "       + ano         + "\n"
+              + "Gênero: "    + genero.getNome() + "\n"
+              + "-----------------------------";
     }
 
     public String toText() {
@@ -37,6 +38,11 @@ public class Filme {
 
     public static Filme fromText(String linha) {
         String[] p = linha.split(";");
-        return new Filme(p[0], p[1], Integer.parseInt(p[2]), new Genero(p[3], ""));
+        return new Filme(
+            p[0],
+            p[1],
+            Integer.parseInt(p[2]),
+            new Genero(p[3], "")
+        );
     }
 }

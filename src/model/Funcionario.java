@@ -21,19 +21,26 @@ public abstract class Funcionario {
     public abstract double calcularSalario();
     public abstract String toText();
 
+    @Override
+    public String toString() {
+        return  "Nome: "       + nome +
+              "\nMatrícula: " + matricula +
+              "\nSalário: R$" + salarioBase;
+    }
+
     public static Funcionario fromText(String linha) {
         String[] partes = linha.split(";");
-        String tipo       = partes[0];
-        String nome       = partes[1];
-        String matricula  = partes[2];
-        double base       = Double.parseDouble(partes[3]);
+        String tipo      = partes[0];
+        String nome      = partes[1];
+        String mat       = partes[2];
+        double base      = Double.parseDouble(partes[3]);
 
         if ("GERENTE".equalsIgnoreCase(tipo)) {
             double bonus = Double.parseDouble(partes[4]);
-            return new Gerente(nome, matricula, base, bonus);
+            return new Gerente(nome, mat, base, bonus);
         } else if ("ATENDENTE".equalsIgnoreCase(tipo)) {
             String turno = partes[4];
-            return new Atendente(nome, matricula, base, turno);
+            return new Atendente(nome, mat, base, turno);
         }
         return null;
     }

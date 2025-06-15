@@ -10,29 +10,38 @@ public class Locacao {
     private LocalDate dataDevolucao;
 
     public Locacao(String cpf, Filme filme, LocalDate dtLoc, LocalDate dtDev) {
-        this.cpf           = cpf;
-        this.filme         = filme;
-        this.dataLocacao   = dtLoc;
-        this.dataDevolucao = dtDev;
+        this.cpf             = cpf;
+        this.filme           = filme;
+        this.dataLocacao     = dtLoc;
+        this.dataDevolucao   = dtDev;
     }
 
-    public String getCpf() { return cpf; }
-    public Filme getFilme() { return filme; }
-    public LocalDate getDataLocacao() { return dataLocacao; }
-    public LocalDate getDataDevolucao() { return dataDevolucao; }
+    public String getCpf() { 
+        return cpf; 
+    }
+    public Filme getFilme() { 
+        return filme; 
+    }
+    public LocalDate getDataLocacao() { 
+        return dataLocacao; 
+    }
+    public LocalDate getDataDevolucao() { 
+        return dataDevolucao; 
+    }
 
     @Override
     public String toString() {
-        return "CPF Cliente: "    + cpf +
-               "\nFilme: "        + filme.getTitulo() +
-               "\nLocado em: "    + dataLocacao +
-               "\nDevolver em: "  + dataDevolucao;
+        return  "CPF Cliente: "  + cpf            + "\n"
+              + "Filme: "        + filme.getTitulo() + "\n"
+              + "Locado em: "    + dataLocacao       + "\n"
+              + "Devolver em: "  + dataDevolucao     + "\n"
+              + "-----------------------------";
     }
 
     public String toText() {
-        return cpf + ";" 
-             + filme.getTitulo() + ";" 
-             + dataLocacao + ";" 
+        return cpf + ";"
+             + filme.getTitulo() + ";"
+             + dataLocacao      + ";"
              + dataDevolucao;
     }
 

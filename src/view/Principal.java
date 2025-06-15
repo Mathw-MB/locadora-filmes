@@ -99,13 +99,19 @@ public class Principal {
                     fmc.adicionar(new Filme(t, d, a, new Genero(g, "")));
                 }
                 case 5 -> {
-                    List<Filme> lista = fmc.getLista();
-                    if (lista.isEmpty()) {
-                        System.out.println("Nenhum filme cadastrado.");
+                    List<Filme> listaFilmes = fmc.getLista();
+                    if (listaFilmes.isEmpty()) {
+                      System.out.println("Nenhum filme cadastrado.");
                     } else {
-                        lista.forEach(System.out::println);
+                      System.out.println("\n=== Lista de Filmes ===");
+                      for (int i = 0; i < listaFilmes.size(); i++) {
+                    Filme fil = listaFilmes.get(i);
+                      System.out.println("\nFilme " + (i + 1) + ":");
+                     System.out.println(fil);  // invoca o toString() corrigido
+                          }
+                        }
                     }
-                }
+
                 case 6 -> {
                     System.out.print("Gênero: ");
                     String gr = Console.lerString();
@@ -173,9 +179,14 @@ public class Principal {
                     if (locs.isEmpty()) {
                         System.out.println("Sem locações.");
                     } else {
-                        locs.forEach(System.out::println);
+                        System.out.println("\n=== Lista de Locações ===");
+                        for (int i = 0; i < locs.size(); i++) {
+                            System.out.println("\nLocação " + (i + 1) + ":");
+                            System.out.println(locs.get(i));  // usa o toString() atualizado
+                        }
                     }
                 }
+
                 case 11 -> {
                     Map<String, Long> rp = lc.locacoesPorFilme();
                     rp.forEach((filme, count) ->

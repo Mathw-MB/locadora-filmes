@@ -29,13 +29,18 @@ public class Atendente extends Funcionario implements Trabalhavel {
 
     @Override
     public String toString() {
-        return "[ATENDENTE] " + super.toString() +
-               "\\nTurno: " + turno;
+        // super.toString() já traz Nome, Matrícula e Salário Base
+        return "[ATENDENTE]\n"
+            + super.toString()
+            + "\nTurno: " + turno;
     }
 
     @Override
     public String toText() {
-        return "ATENDENTE;" + getNome() + ";" + getMatricula() +
-               ";" + getSalarioBase() + ";" + turno;
+        return "ATENDENTE;" 
+            + getNome() + ";" 
+            + getMatricula() + ";" 
+            + getSalarioBase() + ";" 
+            + turno;
     }
 }
