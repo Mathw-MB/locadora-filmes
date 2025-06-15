@@ -15,7 +15,7 @@ import java.util.Map;
 public class Principal {
 
     public static void main(String[] args) {
-        // Carregamento inicial
+        
         FuncionarioController fc = new FuncionarioController();
         fc.carregar();
 
@@ -175,17 +175,17 @@ public class Principal {
                     System.out.println("Locação registrada com sucesso!");
                 }
                 case 10 -> {
-                    List<Locacao> locs = lc.getLista();
-                    if (locs.isEmpty()) {
-                        System.out.println("Sem locações.");
-                    } else {
-                        System.out.println("\n=== Lista de Locações ===");
-                        for (int i = 0; i < locs.size(); i++) {
-                            System.out.println("\nLocação " + (i + 1) + ":");
-                            System.out.println(locs.get(i));  // usa o toString() atualizado
-                        }
+                List<Locacao> locs = lc.getLista();
+                if (locs.isEmpty()) {
+                    System.out.println("Sem locações.");
+                } else {
+                    System.out.println("\n=== Lista de Locações ===");
+                    for (int i = 0; i < locs.size(); i++) {
+                        System.out.println("\nLocação " + (i + 1) + ":");
+                        System.out.println(locs.get(i));  // usa o toString() atualizado
                     }
                 }
+            }
 
                 case 11 -> {
                     Map<String, Long> rp = lc.locacoesPorFilme();

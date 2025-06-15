@@ -54,12 +54,12 @@ public class ClienteController {
         System.out.println("Cliente cadastrado com sucesso!");
     }
 
-    /** Retorna lista imutável de clientes cadastrados */
+
     public List<Cliente> getLista() {
         return Collections.unmodifiableList(lista);
     }
 
-    /** Busca um cliente pelo CPF */
+  
     public Cliente buscarPorCpf(String cpf) {
         return lista.stream()
                     .filter(c -> c.getCpf().equals(cpf))

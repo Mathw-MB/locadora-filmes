@@ -26,6 +26,7 @@ O objetivo é aplicar conceitos de **Orientação a Objetos**, **Herança**, **P
   * `Filme`
   * `Genero`
   * `Locacao` (associação: contém referências a `Filme` e `Cliente`)
+  * `Trabalhavel`
 
 * **controller**
 

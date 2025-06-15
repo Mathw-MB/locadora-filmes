@@ -16,17 +16,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-/**
- * Controlador de locações: carrega, salva e fornece relatórios sobre locações.
- */
+
 public class LocacaoController {
     private static final String ARQUIVO = "locacoes.txt";
     private final List<Locacao> lista = new ArrayList<>();
 
-    /**
-     * Carrega do arquivo todas as locações já registradas,
-     * reconstrói objetos só se CPF e título validarem contra listas.
-     */
+    
     public void carregar(List<Filme> filmes, List<Cliente> clientes) {
         File f = new File(ARQUIVO);
         if (!f.exists()) return;
@@ -45,7 +40,7 @@ public class LocacaoController {
         }
     }
 
-    /** Persiste uma nova locação no final do arquivo. */
+  
     public void salvar(Locacao loc) {
         try (PrintWriter pw = new PrintWriter(new FileWriter(ARQUIVO, true))) {
             pw.println(loc.toText());
@@ -54,24 +49,24 @@ public class LocacaoController {
         }
     }
 
-    /** Adiciona a locação em memória e grava em arquivo. */
+  
     public void adicionar(Locacao loc) {
         lista.add(loc);
         salvar(loc);
     }
 
-    /** Retorna lista não modificável de todas as locações registradas. */
+ 
     public List<Locacao> getLista() {
         return Collections.unmodifiableList(lista);
     }
 
-    /** Relatório: conta quantas vezes cada filme foi locado. */
+
     public Map<String, Long> locacoesPorFilme() {
         return lista.stream()
             .collect(Collectors.groupingBy(l -> l.getFilme().getTitulo(), Collectors.counting()));
     }
 
-    /** Relatório: conta quantas locações de cada gênero foram feitas. */
+
     public Map<String, Long> locacoesPorGenero() {
         return lista.stream()
             .collect(Collectors.groupingBy(l -> l.getFilme().getGenero().getNome(), Collectors.counting()));

@@ -57,12 +57,12 @@ public class FilmeController {
         System.out.println("Filme cadastrado com sucesso!");
     }
 
-    /** Retorna lista imutável de filmes */
+ 
     public List<Filme> getLista() {
         return Collections.unmodifiableList(lista);
     }
 
-    /** Busca filmes por nome de gênero (case-insensitive) */
+  
     public List<Filme> buscarPorGenero(String genero) {
         List<Filme> out = new ArrayList<>();
         for (Filme f : lista) {
